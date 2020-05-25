@@ -1,16 +1,12 @@
-# Package Template
-Repository template for our packages
+# RocketCDN Module
+This module adds the integration for RocketCDN to WP Rocket.
 
-# Usage
-When creating a new repository for a package or a plugin, select this repository as the template. It will initialize the new repository with all the structure & files contained in the template.
-
-# Content
-* `bin/install-wp-tests.sh`: installer for WordPress tests suite
-* `.editorconfig`: config file for your IDE to follow our coding standards
-* `.gitattributes`: list of directories & files excluded from export
-* `.gitignore`: list of directories & files excluded from versioning
-* `.travis.yml`: Travis-CI configuration file
-* `composer.json`: Base composer file to customize for the project
-* `LICENSE`: License file using GPLv3
-* `phpcs.xml`: Base PHP Code Sniffer configuration file to customize for the project
-* `README.md`: The readme displayed on Github, to customize for the project
+It includes:
+- A ServiceProvider to instantiate all classes via the container
+- An APIClient to communicate with RocketCDNAPI
+- A CDNOptionsManager to enable/disable CDN options in WP Rocket
+- Subscribers to interact with the WordPress API
+    - AdminPageSubscriber for actions & filters on WP Rocket settings page
+    - DataManagerSubscriber for AJAX actions
+    - NoticesSubscriber for all RocketCDN related notices
+    - RESTSubscriber for registering the WP REST API routes
