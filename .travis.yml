@@ -13,7 +13,6 @@ branches:
   - develop
 cache:
   directories:
-  - vendor
   - $HOME/.composer/cache
 matrix:
   fast_finish: true
@@ -34,9 +33,12 @@ matrix:
     env: WP_TRAVISCI=phpcs
 before_install:
   # Unless we need XDebug, disable it for improved performance.
-  - phpenv config-rm xdebug.ini || return 0
-  - rm composer.lock
+  - phpenv config-rm xdebug.ini || true
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - |
+    if [[ -f composer.lock ]] ; then
+      rm composer.lock
+    fi
   - composer remove --dev phpstan/phpstan szepeviktor/phpstan-wordpress
 install:
   - composer install --prefer-dist --no-interaction
