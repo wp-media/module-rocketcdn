@@ -3,13 +3,13 @@
 namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::enable
+ * @covers \WPMedia\RocketCDN\DataManagerSubscriber::enable
  *
- * @uses   \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::enable
+ * @uses   \WPMedia\RocketCDN\CDNOptionsManager::enable
  * @uses   \WP_Rocket\Admin\Options_Data::set
  * @uses   \WP_Rocket\Admin\Options::set
  * @uses   \WP_Rocket\Admin\Options::get_option_name
- * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
+ * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber

@@ -5,12 +5,12 @@ namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
 use Mockery;
 use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
-use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
+use WPMedia\RocketCDN\APIClient;
+use WPMedia\RocketCDN\NoticesSubscriber;
 use WP_Rocket\Tests\StubTrait;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::promote_rocketcdn_notice
+ * @covers \WPMedia\RocketCDN\NoticesSubscriber::promote_rocketcdn_notice
  * @group  RocketCDN
  */
 class Test_PromoteRocketcdnNotice extends TestCase {

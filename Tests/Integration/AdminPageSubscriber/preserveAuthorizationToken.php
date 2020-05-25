@@ -6,8 +6,8 @@ use WPMedia\PHPUnit\Integration\ApiTrait;
 use  WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::preserve_authorization_token
- * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::preserve_authorization_token
+ * @covers \WPMedia\RocketCDN\AdminPageSubscriber::preserve_authorization_token
+ * @uses   \WPMedia\RocketCDN\APIClient::preserve_authorization_token
  *
  * @group  AdminOnly
  * @group  RocketCDN

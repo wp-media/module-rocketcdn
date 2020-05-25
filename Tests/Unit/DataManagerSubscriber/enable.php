@@ -4,13 +4,13 @@ namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
 
 use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
-use WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager;
-use WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber;
+use WPMedia\RocketCDN\APIClient;
+use WPMedia\RocketCDN\CDNOptionsManager;
+use WPMedia\RocketCDN\DataManagerSubscriber;
 use Mockery;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::enable
+ * @covers \WPMedia\RocketCDN\DataManagerSubscriber::enable
  * @group  RocketCDN
  */
 class Test_Enable extends TestCase {

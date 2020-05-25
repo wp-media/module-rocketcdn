@@ -3,11 +3,11 @@
 namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\APIClient;
 
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
+use WPMedia\RocketCDN\APIClient;
 use Brain\Monkey\Functions;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
+ * @covers \WPMedia\RocketCDN\APIClient::get_subscription_data
  * @group RocketCDN
  */
 class Test_GetSubscriptionData extends TestCase {

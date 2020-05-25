@@ -2,12 +2,12 @@
 namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
 
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
+use WPMedia\RocketCDN\NoticesSubscriber;
 use Brain\Monkey\Functions;
 use Mockery;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::purge_cache_notice
+ * @covers \WPMedia\RocketCDN\NoticesSubscriber::purge_cache_notice
  *
  * @group RocketCDN
  */
@@ -17,7 +17,7 @@ class Test_PurgeCacheNotice extends TestCase {
 	public function setUp() {
 		parent::setUp();
 
-        $this->api_client = Mockery::mock( 'WP_Rocket\Engine\CDN\RocketCDN\APIClient' );
+        $this->api_client = Mockery::mock( 'WPMedia\RocketCDN\APIClient' );
     }
 
 	/**

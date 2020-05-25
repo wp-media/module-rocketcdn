@@ -6,11 +6,11 @@ use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Admin\Options_Data;
-use WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager;
+use WPMedia\RocketCDN\CDNOptionsManager;
 use Mockery;
 
 /**
- * @covers\WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::enable
+ * @covers\WPMedia\RocketCDN\CDNOptionsManager::enable
  * @group RocketCDN
  */
 class Test_Enable extends TestCase {

@@ -4,11 +4,11 @@ namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\AdminPageSubscriber;
 
 use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber;
+use WPMedia\RocketCDN\AdminPageSubscriber;
 use WP_Rocket\Tests\StubTrait;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::rocketcdn_field
+ * @covers \WPMedia\RocketCDN\AdminPageSubscriber::rocketcdn_field
  * @group  RocketCDN
  */
 class Test_RocketcdnField extends TestCase {
@@ -25,7 +25,7 @@ class Test_RocketcdnField extends TestCase {
 
 		$this->stubRocketGetConstant();
 
-		$this->api_client = Mockery::mock( 'WP_Rocket\Engine\CDN\RocketCDN\APIClient' );
+		$this->api_client = Mockery::mock( 'WPMedia\RocketCDN\APIClient' );
 		$this->options    = Mockery::mock( 'WP_Rocket\Admin\Options_Data' );
 		$this->beacon     = Mockery::mock( 'WP_Rocket\Engine\Admin\Beacon\Beacon' );
 		$this->page       = new AdminPageSubscriber(

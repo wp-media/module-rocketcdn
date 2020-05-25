@@ -4,12 +4,12 @@ namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
 use Mockery;
 use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
-use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
+use WPMedia\RocketCDN\APIClient;
+use WPMedia\RocketCDN\NoticesSubscriber;
 use WP_Rocket\Tests\StubTrait;
 
 /**
- * @covers\WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::add_dismiss_script
+ * @covers\WPMedia\RocketCDN\NoticesSubscriber::add_dismiss_script
  * @group RocketCDN
  */
 class Test_AddDismissScript extends TestCase {

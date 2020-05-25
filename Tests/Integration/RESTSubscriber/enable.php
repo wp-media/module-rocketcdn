@@ -5,8 +5,8 @@ namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\RESTSubscriber;
 use WP_Rocket\Tests\Integration\ApiTestCase;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\RESTSubscriber::enable
- * @uses \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::enable
+ * @covers \WPMedia\RocketCDN\RESTSubscriber::enable
+ * @uses \WPMedia\RocketCDN\CDNOptionsManager::enable
  *
  * @group  RocketCDN
  */

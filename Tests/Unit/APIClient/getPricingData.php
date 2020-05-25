@@ -3,13 +3,13 @@
 namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\APIClient;
 
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
+use WPMedia\RocketCDN\APIClient;
 use Brain\Monkey\Functions;
 use Mockery;
 use WP_Error;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_pricing_data
+ * @covers \WPMedia\RocketCDN\APIClient::get_pricing_data
  * @group RocketCDN
  */
 class Test_GetPricingData extends TestCase {

@@ -3,7 +3,7 @@
 namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::update_user_token
+ * @covers \WPMedia\RocketCDN\DataManagerSubscriber::update_user_token
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber

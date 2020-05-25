@@ -3,7 +3,7 @@
 namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::get_process_status
+ * @covers \WPMedia\RocketCDN\DataManagerSubscriber::get_process_status
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber

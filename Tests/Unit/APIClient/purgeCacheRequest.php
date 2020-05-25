@@ -3,11 +3,11 @@
 namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\APIClient;
 
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
+use WPMedia\RocketCDN\APIClient;
 use Brain\Monkey\Functions;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\APIClient::purge_cache_request
+ * @covers \WPMedia\RocketCDN\APIClient::purge_cache_request
  * @group RocketCDN
  */
 class Test_PurgeCacheRequest extends TestCase {

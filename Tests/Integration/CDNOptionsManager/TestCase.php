@@ -4,7 +4,7 @@ namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\CDNOptionsManager
 
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Admin\Options_Data;
-use WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager;
+use WPMedia\RocketCDN\CDNOptionsManager;
 use WP_Rocket\Tests\Integration\FilesystemTestCase;
 
 abstract class TestCase extends FilesystemTestCase {

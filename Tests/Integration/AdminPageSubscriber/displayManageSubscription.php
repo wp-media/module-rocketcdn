@@ -5,10 +5,10 @@ namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\AdminPageSubscrib
 use WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::display_manage_subscription
+ * @covers \WPMedia\RocketCDN\AdminPageSubscriber::display_manage_subscription
  * @uses   ::rocket_is_live_site
  * @uses   ::rocket_get_constant
- * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
+ * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
  *
  * @group  AdminOnly
  * @group  RocketCDN

@@ -3,9 +3,9 @@
 namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::disable
+ * @covers \WPMedia\RocketCDN\DataManagerSubscriber::disable
  *
- * @uses \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::disable
+ * @uses \WPMedia\RocketCDN\CDNOptionsManager::disable
  * @uses \WP_Rocket\Admin\Options_Data::set
  * @uses \WP_Rocket\Admin\Options::set
  * @uses \WP_Rocket\Admin\Options::get_option_name

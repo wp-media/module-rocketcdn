@@ -5,8 +5,8 @@ namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\RESTSubscriber;
 use WP_Rocket\Tests\Integration\ApiTestCase;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\RESTSubscriber::disable
- * @uses \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::disable
+ * @covers \WPMedia\RocketCDN\RESTSubscriber::disable
+ * @uses \WPMedia\RocketCDN\CDNOptionsManager::disable
  *
  * @group  RocketCDN
  */

@@ -7,12 +7,12 @@ use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WP_Rocket\Admin\Options_Data;
 use WP_Rocket\Engine\Admin\Beacon\Beacon;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
-use WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber;
+use WPMedia\RocketCDN\APIClient;
+use WPMedia\RocketCDN\AdminPageSubscriber;
 use WP_Rocket\Tests\StubTrait;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::display_manage_subscription
+ * @covers \WPMedia\RocketCDN\AdminPageSubscriber::display_manage_subscription
  * @group  RocketCDN
  */
 class Test_DisplayManageSubscription extends TestCase {

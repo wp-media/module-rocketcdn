@@ -4,14 +4,14 @@ namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
 
 use Mockery;
 use Brain\Monkey\Functions;
-use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
-use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
+use WPMedia\RocketCDN\APIClient;
+use WPMedia\RocketCDN\NoticesSubscriber;
 use WP_Rocket\Tests\Unit\TestCase;
 
 /**
- * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::display_rocketcdn_cta
- * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
- * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_pricing_data
+ * @covers \WPMedia\RocketCDN\NoticesSubscriber::display_rocketcdn_cta
+ * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
+ * @uses   \WPMedia\RocketCDN\APIClient::get_pricing_data
  *
  * @group  RocketCDN
  */
