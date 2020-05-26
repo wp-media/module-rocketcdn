@@ -1,14 +1,15 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\APIClient;
+namespace WPMedia\RocketCDN\Tests\Unit\APIClient;
 
+use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\APIClient;
-use Brain\Monkey\Functions;
 
 /**
  * @covers \WPMedia\RocketCDN\APIClient::purge_cache_request
- * @group RocketCDN
+ *
+ * @group  APIClient
  */
 class Test_PurgeCacheRequest extends TestCase {
 

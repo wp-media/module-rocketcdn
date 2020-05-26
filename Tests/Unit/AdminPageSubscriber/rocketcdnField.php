@@ -1,15 +1,16 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\AdminPageSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\AdminPageSubscriber;
 
 use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\AdminPageSubscriber;
-use WP_Rocket\Tests\StubTrait;
+use WPMedia\RocketCDN\Tests\StubTrait;
 
 /**
  * @covers \WPMedia\RocketCDN\AdminPageSubscriber::rocketcdn_field
- * @group  RocketCDN
+ *
+ * @group  AdminPage
  */
 class Test_RocketcdnField extends TestCase {
 	use StubTrait;

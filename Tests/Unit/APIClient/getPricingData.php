@@ -1,16 +1,17 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\APIClient;
+namespace WPMedia\RocketCDN\Tests\Unit\APIClient;
 
-use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\APIClient;
 use Brain\Monkey\Functions;
 use Mockery;
 use WP_Error;
+use WPMedia\PHPUnit\Unit\TestCase;
+use WPMedia\RocketCDN\APIClient;
 
 /**
  * @covers \WPMedia\RocketCDN\APIClient::get_pricing_data
- * @group RocketCDN
+ *
+ * @group  APIClient
  */
 class Test_GetPricingData extends TestCase {
 	private $pricing_data = [

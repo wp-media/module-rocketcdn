@@ -1,17 +1,18 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\CDNOptionsManager;
+namespace WPMedia\RocketCDN\Tests\Unit\CDNOptionsManager;
 
 use Brain\Monkey\Functions;
+use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
+use WPMedia\RocketCDN\CDNOptionsManager;
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Admin\Options_Data;
-use WPMedia\RocketCDN\CDNOptionsManager;
-use Mockery;
 
 /**
- * @covers\WPMedia\RocketCDN\CDNOptionsManager::disable
- * @group RocketCDN
+ * @covers \WPMedia\RocketCDN\CDNOptionsManager::disable
+ *
+ * @group  CDNOptionsManager
  */
 class Test_Disable extends TestCase {
 	public function testShouldDisableCDNOptions() {

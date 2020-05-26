@@ -1,19 +1,19 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\NoticesSubscriber;
 
 use Mockery;
 use Brain\Monkey\Functions;
 use WPMedia\RocketCDN\APIClient;
 use WPMedia\RocketCDN\NoticesSubscriber;
-use WP_Rocket\Tests\Unit\TestCase;
+use WPMedia\RocketCDN\Tests\Unit\TestCase;
 
 /**
  * @covers \WPMedia\RocketCDN\NoticesSubscriber::display_rocketcdn_cta
  * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
  * @uses   \WPMedia\RocketCDN\APIClient::get_pricing_data
  *
- * @group  RocketCDN
+ * @group  Notices
  */
 class Test_DisplayRocketcdnCta extends TestCase {
 	protected static $mockCommonWpFunctionsInSetUp = true;

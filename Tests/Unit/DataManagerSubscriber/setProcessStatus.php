@@ -1,17 +1,18 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WP_Rocket\Tests\Unit\DataManagerSubscriber;
 
 use Brain\Monkey\Functions;
+use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\APIClient;
 use WPMedia\RocketCDN\CDNOptionsManager;
 use WPMedia\RocketCDN\DataManagerSubscriber;
-use Mockery;
 
 /**
  * @covers \WPMedia\RocketCDN\DataManagerSubscriber::set_process_status
- * @group  RocketCDN
+ *
+ * @group  DataManager
  */
 class Test_SetProcessStatus extends TestCase {
 	private $data_manager;

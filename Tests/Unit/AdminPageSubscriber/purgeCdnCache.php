@@ -1,17 +1,18 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\AdminPageSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\AdminPageSubscriber;
 
 use Brain\Monkey\Functions;
+use Mockery;
+use WPDieException;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\AdminPageSubscriber;
-use WPDieException;
 use function WP_Rocket\Tests\getTestsRootDir;
-use Mockery;
 
 /**
  * @covers \WPMedia\RocketCDN\AdminPageSubscriber::purge_cdn_cache
- * @group  RocketCDN
+ *
+ * @group  AdminPage
  */
 class Test_PurgeCdnCache extends TestCase {
 	private $api_client;

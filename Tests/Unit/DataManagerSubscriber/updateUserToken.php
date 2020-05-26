@@ -1,17 +1,18 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\DataManagerSubscriber;
 
 use Brain\Monkey\Functions;
+use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\APIClient;
 use WPMedia\RocketCDN\CDNOptionsManager;
 use WPMedia\RocketCDN\DataManagerSubscriber;
-use Mockery;
 
 /**
  * @covers \WPMedia\RocketCDN\DataManagerSubscriber::update_user_token
- * @group  RocketCDN
+ *
+ * @group  DataManager
  */
 class Test_UpdateUserToken extends TestCase {
 	private $data_manager;

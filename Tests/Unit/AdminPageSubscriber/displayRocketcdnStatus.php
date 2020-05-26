@@ -1,19 +1,20 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\AdminPageSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\AdminPageSubscriber;
 
-use Mockery;
 use Brain\Monkey\Functions;
+use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WP_Rocket\Admin\Options_Data;
-use WP_Rocket\Engine\Admin\Beacon\Beacon;
 use WPMedia\RocketCDN\APIClient;
 use WPMedia\RocketCDN\AdminPageSubscriber;
-use WP_Rocket\Tests\StubTrait;
+use WPMedia\RocketCDN\Tests\StubTrait;
+use WP_Rocket\Admin\Options_Data;
+use WP_Rocket\Engine\Admin\Beacon\Beacon;
 
 /**
  * @covers AdminPageSubscriber::display_rocketcdn_status
- * @group  RocketCDN
+ *
+ * @group  AdminPage
  */
 class Test_DisplayRocketcdnStatus extends TestCase {
 	use StubTrait;

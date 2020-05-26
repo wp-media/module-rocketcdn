@@ -1,15 +1,16 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WP_Rocket\Tests\Unit\DataManagerSubscriber;
 
 use Brain\Monkey\Functions;
+use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\DataManagerSubscriber;
-use Mockery;
 
 /**
  * @covers \WPMedia\RocketCDN\DataManagerSubscriber::maybe_disable_cdn
- * @group  RocketCDN
+ *
+ * @group  DataManager
  */
 class Test_MaybeDisableCDN extends TestCase {
 

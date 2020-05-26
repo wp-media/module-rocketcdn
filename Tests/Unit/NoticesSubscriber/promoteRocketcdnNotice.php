@@ -1,17 +1,18 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\NoticesSubscriber;
 
 use Mockery;
 use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\APIClient;
 use WPMedia\RocketCDN\NoticesSubscriber;
-use WP_Rocket\Tests\StubTrait;
+use WPMedia\RocketCDN\Tests\StubTrait;
 
 /**
  * @covers \WPMedia\RocketCDN\NoticesSubscriber::promote_rocketcdn_notice
- * @group  RocketCDN
+ *
+ * @group  Notices
  */
 class Test_PromoteRocketcdnNotice extends TestCase {
 	use StubTrait;

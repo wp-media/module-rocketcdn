@@ -1,15 +1,15 @@
 <?php
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\NoticesSubscriber;
 
-use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\NoticesSubscriber;
 use Brain\Monkey\Functions;
 use Mockery;
+use WPMedia\PHPUnit\Unit\TestCase;
+use WPMedia\RocketCDN\NoticesSubscriber;
 
 /**
  * @covers \WPMedia\RocketCDN\NoticesSubscriber::purge_cache_notice
  *
- * @group RocketCDN
+ * @group  Notices
  */
 class Test_PurgeCacheNotice extends TestCase {
 	private $api_client;

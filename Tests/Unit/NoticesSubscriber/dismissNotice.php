@@ -1,5 +1,5 @@
 <?php
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\NoticesSubscriber;
 
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\NoticesSubscriber;
@@ -8,7 +8,8 @@ use Mockery;
 
 /**
  * @covers \WPMedia\RocketCDN\NoticesSubscriber::dismiss_notice
- * @group RocketCDN
+ *
+ * @group  Notices
  */
 class Test_DismissNotice extends TestCase {
 	public function testShouldReturnNullWhenNoCapacity() {

@@ -1,17 +1,17 @@
 <?php
 
-namespace WP_Rocket\Tests\Unit\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WPMedia\RocketCDN\Tests\Unit\inc\DataManagerSubscriber;
 
 use Brain\Monkey\Functions;
+use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
 use WPMedia\RocketCDN\APIClient;
 use WPMedia\RocketCDN\CDNOptionsManager;
 use WPMedia\RocketCDN\DataManagerSubscriber;
-use Mockery;
 
 /**
  * @covers \WPMedia\RocketCDN\DataManagerSubscriber::enable
- * @group  RocketCDN
+ * @group  DataManager
  */
 class Test_Enable extends TestCase {
 	public function testShouldSendJSONErrorWhenNoCapacity() {
