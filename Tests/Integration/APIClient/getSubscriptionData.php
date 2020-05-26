@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\APIClient;
+namespace WPMedia\RocketCDN\Tests\Integration\APIClient;
 
 use WPMedia\PHPUnit\Integration\TestCase;
 use WPMedia\PHPUnit\Integration\ApiTrait;
@@ -9,8 +9,8 @@ use Brain\Monkey\Functions;
 
 /**
  * @covers \WPMedia\RocketCDN\APIClient::get_subscription_data
- * @group  RocketCDN
- * @group  RocketCDNAPI
+ *
+ * @group  APIClient
  */
 class Test_GetSubscriptionData extends TestCase {
 	use ApiTrait;

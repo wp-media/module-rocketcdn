@@ -1,16 +1,16 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\NoticesSubscriber;
 
 use Brain\Monkey\Functions;
-use WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\TestCase;
 
 /**
  * @covers \WPMedia\RocketCDN\NoticesSubscriber::add_dismiss_script
  * @uses   ::rocket_is_live_site
  *
  * @group  AdminOnly
- * @group  RocketCDN
+ * @group  Notices
  */
 class Test_AddDismissScript extends TestCase {
 	protected $user_id = 0;

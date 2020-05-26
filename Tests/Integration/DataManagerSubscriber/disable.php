@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
 
 /**
  * @covers \WPMedia\RocketCDN\DataManagerSubscriber::disable
@@ -12,7 +12,6 @@ namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscr
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber
- * @group  RocketCDN
  */
 class Test_Disable extends AjaxTestCase {
 	protected static $ajax_action = 'rocketcdn_disable';

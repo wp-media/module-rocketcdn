@@ -1,17 +1,16 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\APIClient;
+namespace WPMedia\RocketCDN\Tests\Integration\APIClient;
 
 use WPMedia\PHPUnit\Integration\ApiTrait;
-use WP_Rocket\Tests\Integration\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\TestCase;
 use WPMedia\RocketCDN\APIClient;
 
 /**
  * @covers \WPMedia\RocketCDN\APIClient::purge_cache_request
  * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
  *
- * @group  RocketCDN
- * @group  RocketCDNAPI
+ * @group  APIClient
  */
 class Test_PurgeCacheRequest extends TestCase {
 	use ApiTrait;

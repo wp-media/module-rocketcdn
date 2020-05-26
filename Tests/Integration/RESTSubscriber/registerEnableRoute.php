@@ -1,9 +1,8 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\RESTSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\RESTSubscriber;
 
-use WP_Rocket\Tests\Integration\ApiTestCase;
-use WPMedia\PHPUnit\Integration\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\ApiTestCase;
 
 /**
  * @covers \WPMedia\RocketCDN\RESTSubscriber::register_enable_route
@@ -12,7 +11,7 @@ use WPMedia\PHPUnit\Integration\TestCase;
  *
  * @uses \WP_Rocket\Admin\Options_Data::get
  *
- * @group  RocketCDN
+ * @group  RESTSubscriber
  */
 class Test_RegisterEnableRoute extends ApiTestCase {
 

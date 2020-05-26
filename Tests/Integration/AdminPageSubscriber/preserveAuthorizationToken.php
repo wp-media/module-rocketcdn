@@ -1,17 +1,16 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\AdminPageSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
 
 use WPMedia\PHPUnit\Integration\ApiTrait;
-use  WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\TestCase;
 
 /**
  * @covers \WPMedia\RocketCDN\AdminPageSubscriber::preserve_authorization_token
  * @uses   \WPMedia\RocketCDN\APIClient::preserve_authorization_token
  *
  * @group  AdminOnly
- * @group  RocketCDN
- * @group  RocketCDNAdminPage
+ * @group  AdminPage
  */
 class Test_PreserveAuthorizationToken extends TestCase {
 	use ApiTrait;

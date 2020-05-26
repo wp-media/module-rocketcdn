@@ -1,13 +1,12 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
 
 /**
  * @covers \WPMedia\RocketCDN\DataManagerSubscriber::update_user_token
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber
- * @group  RocketCDN
  */
 class Test_UpdateUserToken extends AjaxTestCase {
 	protected static $ajax_action = 'save_rocketcdn_token';

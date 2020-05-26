@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\NoticesSubscriber;
 
 use WPMedia\PHPUnit\Integration\TestCase;
 use Brain\Monkey\Functions;
@@ -10,7 +10,7 @@ use Brain\Monkey\Functions;
  * @uses ::rocket_notice_html
  *
  * @group  AdminOnly
- * @group  RocketCDN
+ * @group  Notices
  */
 class Test_PurgeCacheNotice extends TestCase {
 	public static function SetUpBeforeClass() {

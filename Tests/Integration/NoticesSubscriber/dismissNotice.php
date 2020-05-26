@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\NoticesSubscriber;
 
 use WPMedia\PHPUnit\Integration\AjaxTestCase;
 
@@ -8,7 +8,7 @@ use WPMedia\PHPUnit\Integration\AjaxTestCase;
  * @covers \WPMedia\RocketCDN\NoticesSubscriber::dismiss_notice
  *
  * @group  AdminOnly
- * @group  RocketCDN
+ * @group  Notices
  */
 class Test_DismissNotice extends AjaxTestCase {
 	/**

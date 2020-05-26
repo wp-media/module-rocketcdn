@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\CDNOptionsManager;
+namespace WPMedia\RocketCDN\Tests\Integration\CDNOptionsManager;
 
 /**
  * @covers \WPMedia\RocketCDN\CDNOptionsManager::disable
@@ -16,7 +16,6 @@ namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\CDNOptionsManager
  * @uses  ::rocket_rrmdir
  * @uses  ::_rocket_get_cache_dirs
  *
- * @group  RocketCDN
  * @group  CDNOptionsManager
  */
 class Test_Disable extends TestCase {

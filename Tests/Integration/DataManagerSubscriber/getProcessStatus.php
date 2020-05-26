@@ -1,13 +1,12 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
 
 /**
  * @covers \WPMedia\RocketCDN\DataManagerSubscriber::get_process_status
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber
- * @group  RocketCDN
  */
 class Test_GetProcessStatus extends AjaxTestCase {
 	protected static $ajax_action = 'rocketcdn_process_status';

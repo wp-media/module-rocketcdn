@@ -1,15 +1,14 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\APIClient;
+namespace WPMedia\RocketCDN\Tests\Integration\APIClient;
 
-use WP_Rocket\Tests\Integration\ApiTestCase;
+use WPMedia\RocketCDN\Tests\Integration\ApiTestCase;
 use WPMedia\RocketCDN\APIClient;
 
 /**
  * @covers \WPMedia\RocketCDN\APIClient::get_pricing_data
  *
- * @group  RocketCDN
- * @group  RocketCDNAPI
+ * @group  APIClient
  */
 class Test_GetPricingData extends ApiTestCase {
 

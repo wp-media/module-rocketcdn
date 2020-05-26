@@ -1,9 +1,9 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\NoticesSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\NoticesSubscriber;
 
 use WP_Error;
-use WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\TestCase;
 
 /**
  * @covers \WPMedia\RocketCDN\NoticesSubscriber::display_rocketcdn_cta
@@ -14,7 +14,7 @@ use WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
  * @uses   ::rocket_direct_filesystem
  *
  * @group  AdminOnly
- * @group  RocketCDN
+ * @group  Notices
  */
 class Test_DisplayRocketcdnCta extends TestCase {
 

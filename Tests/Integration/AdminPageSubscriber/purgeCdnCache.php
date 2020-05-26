@@ -1,10 +1,10 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\AdminPageSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
 
 use Brain\Monkey\Functions;
 use WP_Rocket\Subscriber\Plugin\Capabilities_Subscriber;
-use  WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\TestCase;
 use WPDieException;
 
 /**
@@ -12,8 +12,7 @@ use WPDieException;
  * @uses   ::rocket_get_constant
  *
  * @group  AdminOnly
- * @group  RocketCDN
- * @group  RocketCDNAdminPage
+ * @group  AdminPage
  */
 class Test_PurgeCdnCache extends TestCase {
 

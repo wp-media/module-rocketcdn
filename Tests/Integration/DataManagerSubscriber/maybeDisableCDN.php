@@ -1,8 +1,8 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\DataManagerSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
 
-use WP_Rocket\Tests\Integration\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\TestCase;
 use WPMedia\PHPUnit\Integration\ApiTrait;
 
 /**
@@ -10,8 +10,8 @@ use WPMedia\PHPUnit\Integration\ApiTrait;
  * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
  * @uses   ::rocket_get_constant
  *
- * @group  RocketCDN
  * @group  AdminOnly
+ * @group  DataManagerSubscriber
  */
 class Test_MaybeDisableCDN extends TestCase {
 	use ApiTrait;

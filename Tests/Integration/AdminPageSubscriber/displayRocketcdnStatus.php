@@ -1,8 +1,8 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\AdminPageSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
 
-use WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
+use WPMedia\RocketCDN\Tests\Integration\TestCase;
 
 /**
  * @covers \WPMedia\RocketCDN\AdminPageSubscriber::display_rocketcdn_status
@@ -13,8 +13,7 @@ use WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\TestCase;
  * @uses   ::rocket_direct_filesystem
  *
  * @group  AdminOnly
- * @group  RocketCDN
- * @group  RocketCDNAdminPage
+ * @group  AdminPage
  */
 class Test_DisplayRocketcdnStatus extends TestCase {
 

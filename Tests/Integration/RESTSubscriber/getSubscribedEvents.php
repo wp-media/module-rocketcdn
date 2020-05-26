@@ -1,13 +1,14 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\RESTSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\RESTSubscriber;
 
 use WPMedia\PHPUnit\Integration\TestCase;
 use WPMedia\RocketCDN\RESTSubscriber;
 
 /**
  * @covers \WPMedia\RocketCDN\RESTSubscriber::get_subscribed_events
- * @group RocketCDN
+ *
+ * @group RESTSubscriber
  */
 class Test_GetSubscribedEvents extends TestCase {
 

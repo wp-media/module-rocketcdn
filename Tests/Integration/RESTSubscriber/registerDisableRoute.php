@@ -1,8 +1,8 @@
 <?php
 
-namespace WP_Rocket\Tests\Integration\inc\Engine\CDN\RocketCDN\RESTSubscriber;
+namespace WPMedia\RocketCDN\Tests\Integration\RESTSubscriber;
 
-use WP_Rocket\Tests\Integration\ApiTestCase;
+use WPMedia\RocketCDN\Tests\Integration\ApiTestCase;
 
 /**
  * @covers \WPMedia\RocketCDN\RESTSubscriber::register_disable_route
@@ -12,7 +12,7 @@ use WP_Rocket\Tests\Integration\ApiTestCase;
  * @uses \WP_Rocket\Admin\Options_Data::get
  * @uses ::rocket_has_constant
  *
- * @group  RocketCDN
+ * @group  RESTSubscriber
  */
 class Test_RegisterDisableRoute extends ApiTestCase {
 
