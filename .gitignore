@@ -1,2 +1,4 @@
 /vendor/*
 /Tests/env/local/
+
+composer.lock

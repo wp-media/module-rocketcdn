@@ -2339,12 +2339,12 @@
             "version": "3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-media/event-manager.git",
+                "url": "https://github.com/wp-media/module-event-manager.git",
                 "reference": "dfc8b34397ea22fd92d0d98ce077479e3f20c597"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-media/event-manager/zipball/dfc8b34397ea22fd92d0d98ce077479e3f20c597",
+                "url": "https://api.github.com/repos/wp-media/module-event-manager/zipball/dfc8b34397ea22fd92d0d98ce077479e3f20c597",
                 "reference": "dfc8b34397ea22fd92d0d98ce077479e3f20c597",
                 "shasum": ""
             },
