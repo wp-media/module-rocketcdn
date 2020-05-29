@@ -19,6 +19,8 @@ define( 'WP_ROCKET_CACHE_ROOT_URL', 'vfs://public/wp-content/cache/' );
  */
 function load_original_files_before_mocking() {
 	$fixtures = [
+		'/functions.php',
+		'/Abstract_Render.php',
 		'/WP_Error.php',
 		'/WPDieException.php',
 	];
