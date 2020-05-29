@@ -19,7 +19,7 @@ namespace WP_Rocket\Tests\Integration\CDNOptionsManager;
  * @group  CDNOptionsManager
  */
 class Test_Enable extends TestCase {
-	protected $path_to_test_data = '/inc/Engine/CDN/RocketCDN/CDNOptionsManager/enable.php';
+	protected $path_to_test_data = '/CDNOptionsManager/enable.php';
 
 	/**
 	 * @dataProvider providerTestData

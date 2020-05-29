@@ -19,7 +19,7 @@ namespace WP_Rocket\Tests\Integration\CDNOptionsManager;
  * @group  CDNOptionsManager
  */
 class Test_Disable extends TestCase {
-	protected $path_to_test_data = '/inc/Engine/CDN/RocketCDN/CDNOptionsManager/disable.php';
+	protected $path_to_test_data = '/CDNOptionsManager/disable.php';
 
 	public function setUp() {
 		parent::setUp();
