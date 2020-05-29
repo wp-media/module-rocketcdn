@@ -15,13 +15,6 @@ use WPDieException;
  * @group  AdminPage
  */
 class Test_PurgeCdnCache extends TestCase {
-
-	public static function setUpBeforeClass() {
-		parent::setUpBeforeClass();
-
-		( new Capabilities_Subscriber() )->add_rocket_capabilities();
-	}
-
 	public function setUp() {
 		parent::setUp();
 
