@@ -1,11 +1,11 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\CDNOptionsManager;
+namespace WP_Rocket\Tests\Integration\CDNOptionsManager;
 
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Admin\Options_Data;
-use WPMedia\RocketCDN\CDNOptionsManager;
-use WPMedia\RocketCDN\Tests\Integration\FilesystemTestCase;
+use WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager;
+use WP_Rocket\Tests\Integration\FilesystemTestCase;
 
 abstract class TestCase extends FilesystemTestCase {
 	protected static $rocketcdn_user_token;

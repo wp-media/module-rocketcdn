@@ -1,6 +1,6 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests;
+namespace WP_Rocket\Tests;
 
 use Brain\Monkey\Functions;
 use org\bovigo\vfs\vfsStream;

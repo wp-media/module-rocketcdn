@@ -1,12 +1,12 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\NoticesSubscriber;
+namespace WP_Rocket\Tests\Integration\NoticesSubscriber;
 
 use WPMedia\PHPUnit\Integration\TestCase;
 use Brain\Monkey\Functions;
 
 /**
- * @covers \WPMedia\RocketCDN\NoticesSubscriber::purge_cache_notice
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::purge_cache_notice
  * @uses ::rocket_notice_html
  *
  * @group  AdminOnly

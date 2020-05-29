@@ -1,6 +1,6 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration;
+namespace WP_Rocket\Tests\Integration;
 
 use WPMedia\PHPUnit\Integration\RESTfulTestCase as WPMediaRESTfulTestCase;
 

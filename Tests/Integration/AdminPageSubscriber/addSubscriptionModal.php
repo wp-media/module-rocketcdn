@@ -1,11 +1,11 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
+namespace WP_Rocket\Tests\Integration\AdminPageSubscriber;
 
-use WPMedia\RocketCDN\Tests\Integration\TestCase;
+use WP_Rocket\Tests\Integration\TestCase;
 
 /**
- * @covers \WPMedia\RocketCDN\AdminPageSubscriber::add_subscription_modal
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::add_subscription_modal
  * @uses   ::rocket_is_live_site
  * @uses   ::rocket_get_constant
  *

@@ -1,12 +1,12 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\NoticesSubscriber;
+namespace WP_Rocket\Tests\Integration\NoticesSubscriber;
 
 use Brain\Monkey\Functions;
-use WPMedia\RocketCDN\Tests\Integration\TestCase;
+use WP_Rocket\Tests\Integration\TestCase;
 
 /**
- * @covers \WPMedia\RocketCDN\NoticesSubscriber::add_dismiss_script
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::add_dismiss_script
  * @uses   ::rocket_is_live_site
  *
  * @group  AdminOnly

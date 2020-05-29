@@ -1,11 +1,11 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
+namespace WP_Rocket\Tests\Integration\DataManagerSubscriber;
 
 /**
- * @covers \WPMedia\RocketCDN\DataManagerSubscriber::disable
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::disable
  *
- * @uses \WPMedia\RocketCDN\CDNOptionsManager::disable
+ * @uses \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::disable
  * @uses \WP_Rocket\Admin\Options_Data::set
  * @uses \WP_Rocket\Admin\Options::set
  * @uses \WP_Rocket\Admin\Options::get_option_name

@@ -1,15 +1,15 @@
 <?php
-namespace WPMedia\RocketCDN\Tests\Unit\NoticesSubscriber;
+namespace WP_Rocket\Tests\Unit\NoticesSubscriber;
 
 use Mockery;
 use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\APIClient;
-use WPMedia\RocketCDN\NoticesSubscriber;
-use WPMedia\RocketCDN\Tests\StubTrait;
+use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
+use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
+use WP_Rocket\Tests\StubTrait;
 
 /**
- * @covers \WPMedia\RocketCDN\NoticesSubscriber::add_dismiss_script
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::add_dismiss_script
  * 
  * @group  Notices
  */

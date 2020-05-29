@@ -1,15 +1,15 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Unit\APIClient;
+namespace WP_Rocket\Tests\Unit\APIClient;
 
 use Brain\Monkey\Functions;
 use Mockery;
 use WP_Error;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\APIClient;
+use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 
 /**
- * @covers \WPMedia\RocketCDN\APIClient::get_pricing_data
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_pricing_data
  *
  * @group  APIClient
  */

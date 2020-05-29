@@ -1,9 +1,9 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Unit;
+namespace WP_Rocket\Tests\Unit;
 
 use ReflectionObject;
-use WPMedia\RocketCDN\Tests\StubTrait;
+use WP_Rocket\Tests\StubTrait;
 use WPMedia\PHPUnit\Unit\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase {

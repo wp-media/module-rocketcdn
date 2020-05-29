@@ -1,5 +1,5 @@
 <?php
-namespace WPMedia\RocketCDN;
+namespace WP_Rocket\Engine\CDN\RocketCDN;
 
 use League\Container\ServiceProvider\AbstractServiceProvider;
 
@@ -37,25 +37,25 @@ class ServiceProvider extends AbstractServiceProvider {
 	public function register() {
 		$options = $this->getContainer()->get( 'options' );
 		// RocketCDN API Client.
-		$this->getContainer()->add( 'rocketcdn_api_client', 'WPMedia\RocketCDN\APIClient' );
+		$this->getContainer()->add( 'rocketcdn_api_client', 'WP_Rocket\Engine\CDN\RocketCDN\APIClient' );
 		// RocketCDN CDN options manager.
-		$this->getContainer()->add( 'rocketcdn_options_manager', 'WPMedia\RocketCDN\CDNOptionsManager' )
+		$this->getContainer()->add( 'rocketcdn_options_manager', 'WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager' )
 			->withArgument( $this->getContainer()->get( 'options_api' ) )
 			->withArgument( $options );
 		// RocketCDN Data manager subscriber.
-		$this->getContainer()->share( 'rocketcdn_data_manager_subscriber', 'WPMedia\RocketCDN\DataManagerSubscriber' )
+		$this->getContainer()->share( 'rocketcdn_data_manager_subscriber', 'WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber' )
 			->withArgument( $this->getContainer()->get( 'rocketcdn_api_client' ) )
 			->withArgument( $this->getContainer()->get( 'rocketcdn_options_manager' ) );
 		// RocketCDN REST API Subscriber.
-		$this->getContainer()->share( 'rocketcdn_rest_subscriber', 'WPMedia\RocketCDN\RESTSubscriber' )
+		$this->getContainer()->share( 'rocketcdn_rest_subscriber', 'WP_Rocket\Engine\CDN\RocketCDN\RESTSubscriber' )
 			->withArgument( $this->getContainer()->get( 'rocketcdn_options_manager' ) )
 			->withArgument( $options );
 		// RocketCDN Notices Subscriber.
-		$this->getContainer()->share( 'rocketcdn_notices_subscriber', 'WPMedia\RocketCDN\NoticesSubscriber' )
+		$this->getContainer()->share( 'rocketcdn_notices_subscriber', 'WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber' )
 			->withArgument( $this->getContainer()->get( 'rocketcdn_api_client' ) )
 			->withArgument( $this->getContainer()->get( 'template_path' ) . '/settings/rocketcdn' );
 		// RocketCDN settings page subscriber.
-		$this->getContainer()->share( 'rocketcdn_admin_subscriber', 'WPMedia\RocketCDN\AdminPageSubscriber' )
+		$this->getContainer()->share( 'rocketcdn_admin_subscriber', 'WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber' )
 			->withArgument( $this->getContainer()->get( 'rocketcdn_api_client' ) )
 			->withArgument( $options )
 			->withArgument( $this->getContainer()->get( 'beacon' ) )

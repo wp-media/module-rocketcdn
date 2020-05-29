@@ -1,14 +1,14 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
+namespace WP_Rocket\Tests\Integration\AdminPageSubscriber;
 
 use Brain\Monkey\Functions;
 use WP_Rocket\Subscriber\Plugin\Capabilities_Subscriber;
-use WPMedia\RocketCDN\Tests\Integration\TestCase;
+use WP_Rocket\Tests\Integration\TestCase;
 use WPDieException;
 
 /**
- * @covers \WPMedia\RocketCDN\AdminPageSubscriber::purge_cdn_cache
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::purge_cdn_cache
  * @uses   ::rocket_get_constant
  *
  * @group  AdminOnly

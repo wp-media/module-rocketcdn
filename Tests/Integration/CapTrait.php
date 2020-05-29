@@ -1,6 +1,6 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration;
+namespace WP_Rocket\Tests\Integration;
 
 trait CapTrait {
 	public static $had_cap = false;

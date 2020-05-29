@@ -1,15 +1,15 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
+namespace WP_Rocket\Tests\Integration\DataManagerSubscriber;
 
 /**
- * @covers \WPMedia\RocketCDN\DataManagerSubscriber::enable
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::enable
  *
- * @uses   \WPMedia\RocketCDN\CDNOptionsManager::enable
+ * @uses   \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::enable
  * @uses   \WP_Rocket\Admin\Options_Data::set
  * @uses   \WP_Rocket\Admin\Options::set
  * @uses   \WP_Rocket\Admin\Options::get_option_name
- * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
+ * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber

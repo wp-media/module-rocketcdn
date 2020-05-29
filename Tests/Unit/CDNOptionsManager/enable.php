@@ -1,16 +1,16 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Unit\CDNOptionsManager;
+namespace WP_Rocket\Tests\Unit\CDNOptionsManager;
 
 use Brain\Monkey\Functions;
 use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\CDNOptionsManager;
+use WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager;
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Admin\Options_Data;
 
 /**
- * @covers \WPMedia\RocketCDN\CDNOptionsManager::enable
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::enable
  *
  * @group  CDNOptionsManager
  */

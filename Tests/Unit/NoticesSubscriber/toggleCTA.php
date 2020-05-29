@@ -1,13 +1,13 @@
 <?php
-namespace WPMedia\RocketCDN\Tests\Unit\NoticesSubscriber;
+namespace WP_Rocket\Tests\Unit\NoticesSubscriber;
 
 use Brain\Monkey\Functions;
 use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\NoticesSubscriber;
+use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
 
 /**
- * @covers \WPMedia\RocketCDN\NoticesSubscriber::toggle_cta
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::toggle_cta
  *
  * @group  Notices
  */
@@ -18,7 +18,7 @@ class Test_ToggleCTA extends TestCase {
 		parent::setUp();
 
 		$this->notices = new NoticesSubscriber(
-			Mockery::mock( 'WPMedia\RocketCDN\APIClient' ),
+			Mockery::mock( 'WP_Rocket\Engine\CDN\RocketCDN\APIClient' ),
 			'views/settings/rocketcdn'
 		);
 	}

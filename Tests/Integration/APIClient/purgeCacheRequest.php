@@ -1,14 +1,14 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\APIClient;
+namespace WP_Rocket\Tests\Integration\APIClient;
 
 use WPMedia\PHPUnit\Integration\ApiTrait;
-use WPMedia\RocketCDN\Tests\Integration\TestCase;
-use WPMedia\RocketCDN\APIClient;
+use WP_Rocket\Tests\Integration\TestCase;
+use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 
 /**
- * @covers \WPMedia\RocketCDN\APIClient::purge_cache_request
- * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\APIClient::purge_cache_request
+ * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
  *
  * @group  APIClient
  */

@@ -5,10 +5,10 @@ namespace WP_Rocket\Tests\Unit\DataManagerSubscriber;
 use Brain\Monkey\Functions;
 use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\DataManagerSubscriber;
+use WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber;
 
 /**
- * @covers \WPMedia\RocketCDN\DataManagerSubscriber::maybe_disable_cdn
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::maybe_disable_cdn
  *
  * @group  DataManager
  */
@@ -25,14 +25,14 @@ class Test_MaybeDisableCDN extends TestCase {
 		Functions\expect( 'wp_schedule_single_event' )
 			->once();
 
-		$api = Mockery::mock('\WPMedia\RocketCDN\APIClient');
+		$api = Mockery::mock('\WP_Rocket\Engine\CDN\RocketCDN\APIClient');
 		$api->shouldReceive( 'get_subscription_data' )
 		    ->andReturn( [
 			    'subscription_status'           => 'running',
 			    'subscription_next_date_update' => time(),
 		    ] );
 
-		$cdn_options_manager = Mockery::mock('\WPMedia\RocketCDN\CDNOptionsManager');
+		$cdn_options_manager = Mockery::mock('\WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager');
 
 		$data_manager = new DataManagerSubscriber(
 			$api,
@@ -47,14 +47,14 @@ class Test_MaybeDisableCDN extends TestCase {
 			->once()
 			->with( 'rocketcdn_status' );
 
-		$api = Mockery::mock('\WPMedia\RocketCDN\APIClient');
+		$api = Mockery::mock('\WP_Rocket\Engine\CDN\RocketCDN\APIClient');
 		$api->shouldReceive( 'get_subscription_data' )
 			->andReturn( [
 				'subscription_status'           => 'cancelled',
 				'subscription_next_date_update' => time(),
 			] );
 
-		$cdn_options_manager = Mockery::mock('\WPMedia\RocketCDN\CDNOptionsManager');
+		$cdn_options_manager = Mockery::mock('\WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager');
 		$cdn_options_manager->shouldReceive( 'disable' )
 			->once();
 

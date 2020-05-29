@@ -1,11 +1,11 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\NoticesSubscriber;
+namespace WP_Rocket\Tests\Integration\NoticesSubscriber;
 
 use WPMedia\PHPUnit\Integration\AjaxTestCase;
 
 /**
- * @covers \WPMedia\RocketCDN\NoticesSubscriber::dismiss_notice
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::dismiss_notice
  *
  * @group  AdminOnly
  * @group  Notices

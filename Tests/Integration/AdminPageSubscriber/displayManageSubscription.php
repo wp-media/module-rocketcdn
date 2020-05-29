@@ -1,14 +1,14 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
+namespace WP_Rocket\Tests\Integration\AdminPageSubscriber;
 
-use WPMedia\RocketCDN\Tests\Integration\TestCase;
+use WP_Rocket\Tests\Integration\TestCase;
 
 /**
- * @covers \WPMedia\RocketCDN\AdminPageSubscriber::display_manage_subscription
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::display_manage_subscription
  * @uses   ::rocket_is_live_site
  * @uses   ::rocket_get_constant
- * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
+ * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
  *
  * @group  AdminOnly
  * @group  AdminPage

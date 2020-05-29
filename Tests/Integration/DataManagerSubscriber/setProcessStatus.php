@@ -1,9 +1,9 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
+namespace WP_Rocket\Tests\Integration\DataManagerSubscriber;
 
 /**
- * @covers \WPMedia\RocketCDN\DataManagerSubscriber::set_process_status
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::set_process_status
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber

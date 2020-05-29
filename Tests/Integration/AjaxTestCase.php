@@ -1,10 +1,10 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration;
+namespace WP_Rocket\Tests\Integration;
 
 use ReflectionObject;
-use WPMedia\RocketCDN\Tests\SettingsTrait;
-use WPMedia\RocketCDN\Tests\StubTrait;
+use WP_Rocket\Tests\SettingsTrait;
+use WP_Rocket\Tests\StubTrait;
 use WPMedia\PHPUnit\Integration\AjaxTestCase as WPMediaAjaxTestCase;
 
 abstract class AjaxTestCase extends WPMediaAjaxTestCase {

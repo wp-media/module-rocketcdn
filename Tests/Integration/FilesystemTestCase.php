@@ -1,10 +1,10 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration;
+namespace WP_Rocket\Tests\Integration;
 
-use WPMedia\RocketCDN\Tests\SettingsTrait;
-use WPMedia\RocketCDN\Tests\StubTrait;
-use WPMedia\RocketCDN\Tests\VirtualFilesystemTrait;
+use WP_Rocket\Tests\SettingsTrait;
+use WP_Rocket\Tests\StubTrait;
+use WP_Rocket\Tests\VirtualFilesystemTrait;
 use WPMedia\PHPUnit\Integration\VirtualFilesystemTestCase;
 
 abstract class FilesystemTestCase extends VirtualFilesystemTestCase {

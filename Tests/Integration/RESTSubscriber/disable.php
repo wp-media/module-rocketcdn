@@ -1,12 +1,12 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\RESTSubscriber;
+namespace WP_Rocket\Tests\Integration\RESTSubscriber;
 
-use WPMedia\RocketCDN\Tests\Integration\ApiTestCase;
+use WP_Rocket\Tests\Integration\ApiTestCase;
 
 /**
- * @covers \WPMedia\RocketCDN\RESTSubscriber::disable
- * @uses \WPMedia\RocketCDN\CDNOptionsManager::disable
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\RESTSubscriber::disable
+ * @uses \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::disable
  *
  * @group  RESTSubscriber
  */

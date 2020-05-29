@@ -1,14 +1,14 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\APIClient;
+namespace WP_Rocket\Tests\Integration\APIClient;
 
 use WPMedia\PHPUnit\Integration\TestCase;
 use WPMedia\PHPUnit\Integration\ApiTrait;
-use WPMedia\RocketCDN\APIClient;
+use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 use Brain\Monkey\Functions;
 
 /**
- * @covers \WPMedia\RocketCDN\APIClient::get_subscription_data
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
  *
  * @group  APIClient
  */

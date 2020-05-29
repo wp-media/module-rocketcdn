@@ -1,13 +1,13 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
+namespace WP_Rocket\Tests\Integration\AdminPageSubscriber;
 
 use WPMedia\PHPUnit\Integration\ApiTrait;
-use WPMedia\RocketCDN\Tests\Integration\TestCase;
+use WP_Rocket\Tests\Integration\TestCase;
 
 /**
- * @covers \WPMedia\RocketCDN\AdminPageSubscriber::preserve_authorization_token
- * @uses   \WPMedia\RocketCDN\APIClient::preserve_authorization_token
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::preserve_authorization_token
+ * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::preserve_authorization_token
  *
  * @group  AdminOnly
  * @group  AdminPage

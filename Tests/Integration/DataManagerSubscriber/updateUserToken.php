@@ -1,9 +1,9 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
+namespace WP_Rocket\Tests\Integration\DataManagerSubscriber;
 
 /**
- * @covers \WPMedia\RocketCDN\DataManagerSubscriber::update_user_token
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\DataManagerSubscriber::update_user_token
  *
  * @group  AdminOnly
  * @group  DataManagerSubscriber

@@ -1,9 +1,9 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\CDNOptionsManager;
+namespace WP_Rocket\Tests\Integration\CDNOptionsManager;
 
 /**
- * @covers \WPMedia\RocketCDN\CDNOptionsManager::enable
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\CDNOptionsManager::enable
  * @uses   \WP_Rocket\Admin\Options_Data::set
  * @uses   \WP_Rocket\Admin\Options::set
  * @uses   \WP_Rocket\Admin\Options::get_option_name

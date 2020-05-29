@@ -1,13 +1,13 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\AdminPageSubscriber;
+namespace WP_Rocket\Tests\Integration\AdminPageSubscriber;
 
-use WPMedia\RocketCDN\Tests\Integration\TestCase;
+use WP_Rocket\Tests\Integration\TestCase;
 
 /**
- * @covers \WPMedia\RocketCDN\AdminPageSubscriber::rocketcdn_field
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::rocketcdn_field
  *
- * @uses   \WPMedia\RocketCDN\APIClient::get_subscription_data
+ * @uses   \WP_Rocket\Engine\CDN\RocketCDN\APIClient::get_subscription_data
  * @uses   \WP_Rocket\Admin\Options_Data::get
  * @uses   ::rocket_has_constant
  * @uses   \WP_Rocket\Engine\Admin\Beacon\Beacon::get_suggest

@@ -1,6 +1,6 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests;
+namespace WP_Rocket\Tests;
 
 trait SettingsTrait {
 	public static $before_settings = [];

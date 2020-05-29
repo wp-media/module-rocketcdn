@@ -1,9 +1,9 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Integration\DataManagerSubscriber;
+namespace WP_Rocket\Tests\Integration\DataManagerSubscriber;
 
-use WPMedia\RocketCDN\Tests\Integration\AjaxTestCase as BaseAjaxTestCase;
-use WPMedia\RocketCDN\Tests\Integration\CapTrait;
+use WP_Rocket\Tests\Integration\AjaxTestCase as BaseAjaxTestCase;
+use WP_Rocket\Tests\Integration\CapTrait;
 
 abstract class AjaxTestCase extends BaseAjaxTestCase {
 	private static   $user_id = 0;

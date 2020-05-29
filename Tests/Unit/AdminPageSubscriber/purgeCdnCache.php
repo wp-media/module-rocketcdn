@@ -1,16 +1,19 @@
 <?php
 
-namespace WPMedia\RocketCDN\Tests\Unit\AdminPageSubscriber;
+namespace WP_Rocket\Tests\Unit\AdminPageSubscriber;
 
 use Brain\Monkey\Functions;
 use Mockery;
 use WPDieException;
 use WPMedia\PHPUnit\Unit\TestCase;
-use WPMedia\RocketCDN\AdminPageSubscriber;
+use WP_Rocket\Admin\Options_Data;
+use WP_Rocket\Engine\Admin\Beacon\Beacon;
+use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
+use WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber;
 use function WP_Rocket\Tests\getTestsRootDir;
 
 /**
- * @covers \WPMedia\RocketCDN\AdminPageSubscriber::purge_cdn_cache
+ * @covers \WP_Rocket\Engine\CDN\RocketCDN\AdminPageSubscriber::purge_cdn_cache
  *
  * @group  AdminPage
  */
@@ -29,11 +32,11 @@ class Test_PurgeCdnCache extends TestCase {
 
 		unset( $_GET['_wpnonce'] );
 
-		$this->api_client = Mockery::mock( 'WPMedia\RocketCDN\APIClient' );
+		$this->api_client = Mockery::mock( APIClient::class );
 		$this->page       = new AdminPageSubscriber(
 			$this->api_client,
-			Mockery::mock( 'WP_Rocket\Admin\Options_Data' ),
-			Mockery::mock( 'WP_Rocket\Engine\Admin\Beacon\Beacon' ),
+			Mockery::mock( Options_Data::class ),
+			Mockery::mock( Beacon::class ),
 			''
 		);
 	}
