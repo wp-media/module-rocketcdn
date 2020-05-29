@@ -31,7 +31,7 @@
 		"wp-media/phpunit": "^1.0"
 	},
 	"autoload": {
-		"psr-4": { "WP_Rocket\\": "." }
+		"psr-4": { "WP_Rocket\\": "inc/" }
 	},
 	"autoload-dev": {
 		"psr-4": { "WP_Rocket\\Tests\\": "Tests/"	}
