@@ -3,7 +3,6 @@
 namespace WP_Rocket\Tests\Integration\NoticesSubscriber;
 
 use WPMedia\PHPUnit\Integration\TestCase;
-use Brain\Monkey\Functions;
 
 /**
  * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::purge_cache_notice
@@ -16,19 +15,24 @@ class Test_PurgeCacheNotice extends TestCase {
 	public static function SetUpBeforeClass() {
 		$role = get_role( 'administrator' );
 		$role->add_cap( 'rocket_manage_options' );
+
+		set_transient( 'rocketcdn_status', [
+			'subscription_status'           => 'running',
+		] );
 	}
 
-	private function get_notice( $status = 'success', $message = '' ) {
-		return $this->format_the_html( '<div class="notice notice-' . $status . ' is-dismissible">
-		<p>' . $message . '</p>
-		</div>' );
+	public static function tearDownAfterClass() {
+		$role = get_role( 'administrator' );
+		$role->remove_cap( 'rocket_manage_options' );
+
+		delete_transient( 'rocketcdn_status' );
 	}
 
-	private function getActualHtml() {
-		ob_start();
-		do_action( 'admin_notices' );
+	public function tearDown() {
+		parent::tearDown();
 
-		return $this->format_the_html( ob_get_clean() );
+		set_current_screen( 'front' );
+		delete_transient( 'rocketcdn_purge_cache_response' );
 	}
 
 	/**
@@ -78,10 +82,20 @@ class Test_PurgeCacheNotice extends TestCase {
 		set_current_screen( 'settings_page_wprocket' );
 		set_transient( 'rocketcdn_purge_cache_response', [ 'status' => 'success', 'message' => 'RocketCDN cache purge successful.' ], MINUTE_IN_SECONDS );
 
-		Functions\expect('delete_transient')
-		->once()
-		->with( 'rocketcdn_purge_cache_response' );
-
 		$this->assertContains( $this->get_notice( 'success', 'RocketCDN cache purge successful.' ), $this->getActualHtml() );
+		$this->assertFalse( get_transient( 'rocketcdn_purge_cache_response' ) );
+	}
+
+	private function get_notice( $status = 'success', $message = '' ) {
+		return $this->format_the_html( '<div class="notice notice-' . $status . ' is-dismissible">
+		<p>' . $message . '</p>
+		</div>' );
+	}
+
+	private function getActualHtml() {
+		ob_start();
+		do_action( 'admin_notices' );
+
+		return $this->format_the_html( ob_get_clean() );
 	}
 }
