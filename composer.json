@@ -1,7 +1,7 @@
 {
-	"name": "wp-media/rocketcdn",
+	"name": "wp-media/module-rocketcdn",
 	"description": "Module for RocketCDN integration",
-	"homepage": "https://github.com/wp-media/rocketcdn",
+	"homepage": "https://github.com/wp-media/module-rocketcdn",
 	"license": "GPL-2.0+",
 	"authors": [
 		{
@@ -15,8 +15,8 @@
 		"sort-packages": true
 	},
 	"support": {
-		"issues": "https://github.com/wp-media/rocketcdn/issues",
-		"source": "https://github.com/wp-media/rocketcdn"
+		"issues": "https://github.com/wp-media/module-rocketcdn/issues",
+		"source": "https://github.com/wp-media/module-rocketcdn"
 	},
 	"require-dev": {
 		"php": "^5.6 || ^7",
@@ -29,7 +29,7 @@
 		"wp-coding-standards/wpcs": "^2",
 		"wp-media/event-manager": "^3.1",
 		"wp-media/options": "^3.0",
-		"wp-media/phpunit": "^1.0"
+		"wp-media/phpunit-wp-rocket": "dev-master"
 	},
 	"autoload": {
 		"psr-4": { "WP_Rocket\\": "inc/" }
