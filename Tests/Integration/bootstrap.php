@@ -6,13 +6,10 @@ use League\Container\Container;
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Admin\Options_Data;
 use WP_Rocket\Event_Management\Event_Manager;
-use WPMedia\PHPUnit\BootstrapManager;
-use function Patchwork\redefine;
 
 define( 'WP_ROCKET_PLUGIN_ROOT', dirname( dirname( __DIR__ ) ) . DIRECTORY_SEPARATOR );
 define( 'WP_ROCKET_TESTS_FIXTURES_DIR', dirname( __DIR__ ) . '/Fixtures' );
 define( 'WP_ROCKET_TESTS_DIR', __DIR__ );
-define( 'WP_ROCKET_IS_TESTING', true );
 
 /**
  * The original files need to loaded into memory before we mock them with Patchwork. Add files here before the unit
