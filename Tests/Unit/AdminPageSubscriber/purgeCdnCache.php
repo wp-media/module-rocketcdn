@@ -21,12 +21,6 @@ class Test_PurgeCdnCache extends TestCase {
 	private $api_client;
 	private $page;
 
-	public static function setUpBeforeClass() {
-		parent::setUpBeforeClass();
-
-		require_once WP_ROCKET_TESTS_FIXTURES_DIR . '/WPDieException.php';
-	}
-
 	public function setUp() {
 		parent::setUp();
 

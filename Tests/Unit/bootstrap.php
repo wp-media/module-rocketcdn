@@ -2,10 +2,11 @@
 
 namespace WP_Rocket\Tests\Unit;
 
-define( 'WP_ROCKET_PLUGIN_ROOT', dirname( dirname( __DIR__ ) ) . DIRECTORY_SEPARATOR );
-define( 'WP_ROCKET_TESTS_FIXTURES_DIR', dirname( __DIR__ ) . '/Fixtures' );
+define( 'WPMEDIA_MODULE_ROOT', dirname( dirname( __DIR__ ) ) . DIRECTORY_SEPARATOR );
+define( 'WP_ROCKET_PLUGIN_ROOT', WPMEDIA_MODULE_ROOT );
+define( 'WPMEDIA_MODULE_TESTS_FIXTURES_DIR', dirname( __DIR__ ) . '/Fixtures' );
+define( 'WP_ROCKET_TESTS_FIXTURES_DIR', WPMEDIA_MODULE_TESTS_FIXTURES_DIR );
 define( 'WP_ROCKET_TESTS_DIR', __DIR__ );
-define( 'WP_ROCKET_PHPUNIT_ROOT_DIR', WP_ROCKET_PLUGIN_ROOT . 'vendor/wp-media/phpunit-wp-rocket/' );
 
 /**
  * The original files need to loaded into memory before we mock them with Patchwork. Add files here before the unit
@@ -19,7 +20,7 @@ function load_original_files_before_mocking() {
 		'/Abstract_Render.php',
 	];
 	foreach ( $fixtures as $file ) {
-		require_once WP_ROCKET_TESTS_FIXTURES_DIR . $file;
+		require_once WPMEDIA_MODULE_TESTS_FIXTURES_DIR . $file;
 	}
 }
 
