@@ -29,8 +29,8 @@
 		"wp-coding-standards/wpcs": "^2",
 		"wp-media/event-manager": "^3.1",
 		"wp-media/options": "^3.0",
-		"wp-media/phpunit": "dev-master",
-		"wp-media/phpunit-wp-rocket": "dev-master"
+		"wp-media/phpunit": "^1.0",
+		"wp-media/phpunit-wp-rocket": "^1.0"
 	},
 	"autoload": {
 		"psr-4": { "WP_Rocket\\": "inc/" }
