@@ -10,7 +10,7 @@
 			"homepage": "https://wp-media.me"
 		}
 	],
-	"type": "wp-media-addon",
+	"type": "library",
 	"config": {
 		"sort-packages": true
 	},
