@@ -33,7 +33,7 @@
 		"wp-media/phpunit-wp-rocket": "^1.0"
 	},
 	"autoload": {
-		"psr-4": { "WP_Rocket\\": "inc/" }
+		"psr-4": { "WP_Rocket\\Engine\\CDN\\RocketCDN\\": "." }
 	},
 	"autoload-dev": {
 		"psr-4": { "WP_Rocket\\Tests\\": "Tests/"	}
