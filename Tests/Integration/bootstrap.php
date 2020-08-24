@@ -29,7 +29,6 @@ tests_add_filter(
 		$container->add( 'options', 'WP_Rocket\Admin\Options_Data' )
 			->withArgument( $container->get( 'options_api' )->get( 'settings', [] ) );
 
-		$container->add( 'template_path', WPMEDIA_MODULE_ROOT . 'views' );
 		$container->add( 'beacon', 'WP_Rocket\Engine\Admin\Beacon\Beacon' )
 			->withArgument( $container->get( 'options' ) )
 			->withArgument( $container->get( 'template_path' ) . '/settings' );
