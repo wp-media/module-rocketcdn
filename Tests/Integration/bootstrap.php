@@ -2,7 +2,7 @@
 
 namespace WP_Rocket\Tests\Integration;
 
-use League\Container\Container;
+use WP_Rocket\Engine\Container\Container;
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Event_Management\Event_Manager;
 
@@ -29,6 +29,7 @@ tests_add_filter(
 		$container->add( 'options', 'WP_Rocket\Admin\Options_Data' )
 			->withArgument( $container->get( 'options_api' )->get( 'settings', [] ) );
 
+		$container->add( 'template_path', WPMEDIA_MODULE_ROOT . 'views' );
 		$container->add( 'beacon', 'WP_Rocket\Engine\Admin\Beacon\Beacon' )
 			->withArgument( $container->get( 'options' ) )
 			->withArgument( $container->get( 'template_path' ) . '/settings' );
