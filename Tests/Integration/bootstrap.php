@@ -2,7 +2,7 @@
 
 namespace WP_Rocket\Tests\Integration;
 
-use League\Container\Container;
+use WP_Rocket\Engine\Container\Container;
 use WP_Rocket\Admin\Options;
 use WP_Rocket\Event_Management\Event_Manager;
 
@@ -11,6 +11,7 @@ define( 'WP_ROCKET_PLUGIN_ROOT', WPMEDIA_MODULE_ROOT );
 define( 'WPMEDIA_MODULE_TESTS_FIXTURES_DIR', dirname( __DIR__ ) . '/Fixtures' );
 define( 'WP_ROCKET_TESTS_FIXTURES_DIR', WPMEDIA_MODULE_TESTS_FIXTURES_DIR );
 define( 'WP_ROCKET_TESTS_DIR', __DIR__ );
+define( 'WP_ROCKET_IS_TESTING', true );
 
 // Manually load the plugin being tested.
 tests_add_filter(
@@ -29,6 +30,7 @@ tests_add_filter(
 		$container->add( 'options', 'WP_Rocket\Admin\Options_Data' )
 			->withArgument( $container->get( 'options_api' )->get( 'settings', [] ) );
 
+		$container->add( 'template_path', WPMEDIA_MODULE_ROOT . 'views' );
 		$container->add( 'beacon', 'WP_Rocket\Engine\Admin\Beacon\Beacon' )
 			->withArgument( $container->get( 'options' ) )
 			->withArgument( $container->get( 'template_path' ) . '/settings' );
