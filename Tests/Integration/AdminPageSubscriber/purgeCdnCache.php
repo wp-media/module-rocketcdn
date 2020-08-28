@@ -3,8 +3,8 @@
 namespace WP_Rocket\Tests\Integration\AdminPageSubscriber;
 
 use Brain\Monkey\Functions;
-use WP_Rocket\Subscriber\Plugin\Capabilities_Subscriber;
-use WP_Rocket\Tests\Integration\TestCase;
+use WP_Rocket\Tests\Integration\CapTrait;
+use WP_Rocket\Tests\Integration\RocketCdnTestCase;
 use WPDieException;
 
 /**
@@ -14,7 +14,22 @@ use WPDieException;
  * @group  AdminOnly
  * @group  AdminPage
  */
-class Test_PurgeCdnCache extends TestCase {
+class Test_PurgeCdnCache extends RocketCdnTestCase {
+	use CapTrait;
+
+	public static function setUpBeforeClass() {
+		parent::setUpBeforeClass();
+
+		CapTrait::hasAdminCapBeforeClass();
+		CapTrait::setAdminCap();
+	}
+
+	public static function tearDownAfterClass() {
+		parent::tearDownAfterClass();
+
+		CapTrait::resetAdminCap();
+	}
+
 	public function setUp() {
 		parent::setUp();
 
