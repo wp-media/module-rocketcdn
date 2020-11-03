@@ -102,8 +102,9 @@ class Test_DisplayRocketcdnCta extends TestCase {
 		} else {
 			$pricing = $data['rocketcdn_pricing'];
 
-			Functions\expect( 'get_option' )->once()->with( 'date_format' )->andReturn( 'Y-m-d' );
+			Functions\expect( 'get_option' )->atMost()->once()->with( 'date_format' )->andReturn( 'Y-m-d' );
 			Functions\expect( 'date_i18n' )
+				->atMost()
 				->once()
 				->with( 'Y-m-d', strtotime( $data['rocketcdn_pricing']['end_date'] ) )
 				->andReturn( $data['rocketcdn_pricing']['end_date'] );
