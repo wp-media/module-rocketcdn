@@ -33,6 +33,7 @@ jobs:
     php: 7.3
     env: WP_TRAVISCI=phpcs
 before_install:
+  - composer self-update 1.10.16
   # Unless we need XDebug, disable it for improved performance.
   - phpenv config-rm xdebug.ini || true
   - export PATH="$HOME/.composer/vendor/bin:$PATH"

@@ -75,6 +75,9 @@ class Test_DisplayRocketcdnCta extends TestCase {
 			add_user_meta( $user_id, 'rocket_rocketcdn_cta_hidden', true );
 		}
 
-		$this->assertContains( $this->format_the_html( $expected['integration'] ), $this->getActualHtml() );
+		$this->assertSame(
+			$this->format_the_html( $expected['integration'] ),
+			$this->getActualHtml()
+		);
 	}
 }
