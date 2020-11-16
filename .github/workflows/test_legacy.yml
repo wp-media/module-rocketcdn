@@ -1,4 +1,4 @@
-name: RocketCDN Test - Legacy
+name: Module Test - Legacy
 
 on:
   pull_request:
