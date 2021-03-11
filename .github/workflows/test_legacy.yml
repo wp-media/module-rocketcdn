@@ -1,4 +1,4 @@
-name: Module Test - Legacy
+name: Unit/Integration tests - Legacy
 
 on:
   pull_request:
