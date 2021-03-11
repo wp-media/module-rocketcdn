@@ -7,7 +7,6 @@ define( 'WP_ROCKET_PLUGIN_ROOT', WPMEDIA_MODULE_ROOT );
 define( 'WPMEDIA_MODULE_TESTS_FIXTURES_DIR', dirname( __DIR__ ) . '/Fixtures' );
 define( 'WP_ROCKET_TESTS_FIXTURES_DIR', WPMEDIA_MODULE_TESTS_FIXTURES_DIR );
 define( 'WP_ROCKET_TESTS_DIR', __DIR__ );
-define( 'WP_ROCKET_IS_TESTING', true );
 
 /**
  * The original files need to loaded into memory before we mock them with Patchwork. Add files here before the unit
