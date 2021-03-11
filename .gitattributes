@@ -1,4 +1,5 @@
 bin export-ignore
+Dependencies export-ignore
 Tests export-ignore
 vendor export-ignore
 
