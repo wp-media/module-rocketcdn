@@ -1,4 +1,4 @@
 /vendor/*
 /Tests/env/local/
 composer.lock
-vfs:/
+/Dependencies/*
