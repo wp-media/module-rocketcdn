@@ -27,6 +27,7 @@
 		"phpcompatibility/phpcompatibility-wp": "^2.0",
 		"phpstan/phpstan": "^0.12.81",
 		"phpunit/phpunit": "^7",
+		"psr/container": "1.0.0",
 		"roave/security-advisories": "dev-master",
 		"szepeviktor/phpstan-wordpress": "^0.7.4",
 		"wp-coding-standards/wpcs": "^2",
