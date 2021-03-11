@@ -45,7 +45,7 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 
 	/**
@@ -71,7 +71,7 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 
 	/**
@@ -97,7 +97,7 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 
 	/**
@@ -124,7 +124,7 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 
 	/**
@@ -151,7 +151,7 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 
 	/**
@@ -178,7 +178,7 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 
 	/**
@@ -206,7 +206,7 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 
 	/**
@@ -228,6 +228,6 @@ class Test_RegisterEnableRoute extends ApiTestCase {
 			],
 		];
 
-		$this->assertSame( $expected, $actual );
+		$this->assertArraySubset( $expected, $actual );
 	}
 }
