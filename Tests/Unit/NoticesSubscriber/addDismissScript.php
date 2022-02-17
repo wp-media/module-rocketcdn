@@ -25,6 +25,7 @@ class Test_AddDismissScript extends TestCase {
 		parent::setUp();
 
 		$this->stubRocketGetConstant();
+		$this->stubEscapeFunctions();
 
 		$this->api_client = Mockery::mock( APIClient::class );
 		$this->notices    = new NoticesSubscriber( $this->api_client, Mockery::mock( Beacon::class ), 'views/settings/rocketcdn' );

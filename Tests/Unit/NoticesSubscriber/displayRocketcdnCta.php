@@ -26,6 +26,9 @@ class Test_DisplayRocketcdnCta extends TestCase {
 	public function setUp() {
 		parent::setUp();
 
+		$this->stubEscapeFunctions();
+		$this->stubTranslationFunctions();
+
 		$this->api_client = Mockery::mock( APIClient::class );
 		$this->beacon     = Mockery::mock( Beacon::class );
 		$this->notices    = Mockery::mock(

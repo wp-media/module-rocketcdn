@@ -27,6 +27,7 @@ class Test_DisplayManageSubscription extends TestCase {
 		parent::setUp();
 
 		$this->stubRocketGetConstant();
+		$this->stubTranslationFunctions();
 
 		$this->api_client = Mockery::mock( APIClient::class );
 		$this->page       = new AdminPageSubscriber(
