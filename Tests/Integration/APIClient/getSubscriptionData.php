@@ -75,6 +75,20 @@ class Test_GetSubscriptionData extends RocketCdnTestCase {
 	 * Test should return the status when set in the transient.
 	 */
 	public function testShouldReturnDefaultAndSetTransientWhenInvalidUserToken() {
+		$request = function() {
+			return [
+				'headers' => [],
+				'body' => '',
+				'response' => [
+					'code' => 401,
+				],
+				'cookies' => [],
+				'filename' => '',
+			];
+		};
+
+		add_filter( 'pre_http_request', $request );
+
 		// Check that API sends us a 401.
 		$response = wp_remote_get(
 			APIClient::ROCKETCDN_API . 'website/search/?url=' . home_url(),
@@ -98,6 +112,8 @@ class Test_GetSubscriptionData extends RocketCdnTestCase {
 		$this->assertFalse( get_transient( 'rocketcdn_status' ) );
 		$this->assertSame( $expected, $this->client->get_subscription_data() );
 		$this->assertSame( $expected, get_transient( 'rocketcdn_status' ) );
+
+		remove_filter( 'pre_http_request', $request );
 	}
 
 	/**
@@ -105,6 +121,20 @@ class Test_GetSubscriptionData extends RocketCdnTestCase {
 	 * from the API.
 	 */
 	public function testShouldReturnDefaultAndSetTransientWhenValidUserTokenButNoDataReceived() {
+		$request = function() {
+			return [
+				'headers' => [],
+				'body' => '',
+				'response' => [
+					'code' => 200,
+				],
+				'cookies' => [],
+				'filename' => '',
+			];
+		};
+
+		add_filter( 'pre_http_request', $request );
+
 		// Check that API sends us a 200.
 		$response = wp_remote_get(
 			APIClient::ROCKETCDN_API . 'website/search/?url=' . home_url(),
@@ -125,11 +155,11 @@ class Test_GetSubscriptionData extends RocketCdnTestCase {
 			'subscription_status'           => 'cancelled',
 		];
 
-		Functions\when( 'wp_remote_retrieve_body' )->justReturn( '' );
-
 		$this->assertFalse( get_transient( 'rocketcdn_status' ) );
 		$this->assertSame( $expected, $this->client->get_subscription_data() );
 		$this->assertSame( $expected, get_transient( 'rocketcdn_status' ) );
+
+		remove_filter( 'pre_http_request', $request );
 	}
 
 	/**
@@ -137,6 +167,28 @@ class Test_GetSubscriptionData extends RocketCdnTestCase {
 	 * received from the API.
 	 */
 	public function testShouldReturnDataAndSetTransientWhenReceivedFromAPI() {
+		$request = function() {
+			return [
+				'headers' => [],
+				'body' => json_encode(
+					 [
+						'id'                            => 5002,
+						'is_active'                     => true,
+						'cdn_url'                       => 'https://h8f6b6m6.rocketcdn.me',
+						'subscription_next_date_update' => 0,
+						'subscription_status'           => 'running',
+					]
+				),
+				'response' => [
+					'code' => 200,
+				],
+				'cookies' => [],
+				'filename' => '',
+			];
+		};
+
+		add_filter( 'pre_http_request', $request );
+
 		// Check that API sends us a 200.
 		$response = wp_remote_get(
 			APIClient::ROCKETCDN_API . 'website/search/?url=' . home_url(),
@@ -171,5 +223,7 @@ class Test_GetSubscriptionData extends RocketCdnTestCase {
 		$this->assertSame( $data['cdn_url'], self::getApiCredential( 'ROCKETCDN_URL' ) );
 		$this->assertTrue( in_array( $data['subscription_status'], [ 'running', 'cancelled' ], true ) );
 		$this->assertSame( $data, get_transient( 'rocketcdn_status' ) );
+
+		remove_filter( 'pre_http_request', $request );
 	}
 }
