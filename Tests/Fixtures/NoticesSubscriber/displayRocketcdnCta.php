@@ -514,7 +514,7 @@ HTML
 			'rocketcdn_status'  => [
 				'subscription_status' => 'cancelled',
 			],
-			'rocketcdn_pricing' => 'RocketCDN is not available at the moment. Please retry later',
+			'rocketcdn_pricing' => 'RocketCDN is not available at the moment. Please retry later.',
 		],
 
 		'expected' => [
@@ -526,7 +526,7 @@ HTML
 					'container_class' => '',
 					'nopromo_variant' => '--no-promo',
 					'error'           => true,
-					'message'         => 'RocketCDN is not available at the moment. Please retry later',
+					'message'         => 'RocketCDN is not available at the moment. Please retry later. <a href="" data-beacon-article="" rel="noopener noreferrer" target="_blank">More Info</a>',
 				],
 			],
 			'integration' => <<<HTML
@@ -551,7 +551,7 @@ HTML
 				<li class="wpr-rocketcdn-feature wpr-rocketcdn-automatic">WP Rocket integration: the CDN option is <strong>automatically configured</strong> in our plugin</li>
 			</ul>
 			<div class="wpr-rocketcdn-pricing">
-				<p>RocketCDN is not available at the moment. Please retry later</p>
+				<p>RocketCDN is not available at the moment. Please retry later. <a href="" data-beacon-article="" rel="noopener noreferrer" target="_blank">More Info</a></p>
 			</div>
 		</div>
 	</section>

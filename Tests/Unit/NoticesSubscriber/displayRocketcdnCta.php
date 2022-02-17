@@ -4,6 +4,7 @@ namespace WP_Rocket\Tests\Unit\NoticesSubscriber;
 
 use Mockery;
 use Brain\Monkey\Functions;
+use WP_Rocket\Engine\Admin\Beacon\Beacon;
 use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
 use WP_Rocket\Tests\Unit\TestCase;
@@ -20,15 +21,18 @@ class Test_DisplayRocketcdnCta extends TestCase {
 
 	private $api_client;
 	private $notices;
+	private $beacon;
 
 	public function setUp() {
 		parent::setUp();
 
 		$this->api_client = Mockery::mock( APIClient::class );
+		$this->beacon     = Mockery::mock( Beacon::class );
 		$this->notices    = Mockery::mock(
 			NoticesSubscriber::class . '[generate]',
 			[
 				$this->api_client,
+				$this->beacon,
 				'views/settings/rocketcdn',
 			]
 		);
@@ -93,6 +97,16 @@ class Test_DisplayRocketcdnCta extends TestCase {
 			->andReturn( $config['rocket_rocketcdn_cta_hidden'] );
 
 		if ( $config['is_wp_error'] ) {
+			$this->beacon->shouldReceive( 'get_suggest' )
+			->once()
+			->with( 'rocketcdn_error' )
+			->andReturn(
+				[
+					'id'  => '',
+					'url' => '',
+				]
+			);
+
 			$pricing = Mockery::mock( 'WP_Error' );
 			$pricing->shouldReceive( 'get_error_message' )->once()->andReturn( $data['rocketcdn_pricing'] );
 
