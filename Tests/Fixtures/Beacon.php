@@ -553,6 +553,16 @@ if ( ! class_exists( 'WP_Rocket\Engine\Admin\Beacon\Beacon' ) ) {
 						'url' => 'https://fr.docs.wp-rocket.me/article/1308-rocketcdn/?utm_source=wp_plugin&utm_medium=wp_rocket',
 					],
 				],
+				'rocketcdn_error'            => [
+					'en' => [
+						'id'  => '5e4c84bd04286364bc958833',
+						'url' => 'https://docs.wp-rocket.me/article/1307-rocketcdn/?utm_source=wp_plugin&utm_medium=wp_rocket',
+					],
+					'fr' => [
+						'id'  => '5e5e36712c7d3a7e9ae89555',
+						'url' => 'https://fr.docs.wp-rocket.me/article/1308-rocketcdn/?utm_source=wp_plugin&utm_medium=wp_rocket',
+					],
+				],
 				'exclude_cdn'                => [
 					'en' => [
 						'id'  => '5434667fe4b0310ce5ee867a',
