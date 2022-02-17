@@ -62,9 +62,9 @@ defined( 'ABSPATH' ) || die( 'Cheatin&#8217; uh?' );
 						<?php
 						printf(
 						// translators: %1$s = discounted price, %2$s = regular price.
-								esc_html__( '*$%1$s/month for 12 months then $%2$s/month. You can cancel your subscription at any time.', 'rocket' ),
-								esc_html( str_replace( '*', '', $data['current_price'] ) ),
-								esc_html( $data['regular_price'] )
+							esc_html__( '*$%1$s/month for 12 months then $%2$s/month. You can cancel your subscription at any time.', 'rocket' ),
+							esc_html( str_replace( '*', '', $data['current_price'] ) ),
+							esc_html( $data['regular_price'] )
 						);
 						?>
 					</li>
