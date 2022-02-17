@@ -69,7 +69,7 @@ class Test_GetPricingData extends ApiTestCase {
 					'end_date' => time(),
 					'monthly_price' => '7.99',
 					'annual_price' => '79.9',
-				],
+				]
 			),
 			'response' => [
 				'code' => 200,
