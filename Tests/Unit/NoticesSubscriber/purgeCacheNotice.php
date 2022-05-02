@@ -4,6 +4,7 @@ namespace WP_Rocket\Tests\Unit\NoticesSubscriber;
 use Brain\Monkey\Functions;
 use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
+use WP_Rocket\Engine\Admin\Beacon\Beacon;
 use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
 
 /**
@@ -26,7 +27,7 @@ class Test_PurgeCacheNotice extends TestCase {
 	public function testShouldReturnNullWhenNoPermissions() {
 		Functions\when('current_user_can')->justReturn(false);
 
-		$page = new NoticesSubscriber( $this->api_client, 'views/settings/rocketcdn');
+		$page = new NoticesSubscriber( $this->api_client, Mockery::mock( Beacon::class ), 'views/settings/rocketcdn');
 		$this->assertNull($page->purge_cache_notice() );
 	}
 
@@ -39,7 +40,7 @@ class Test_PurgeCacheNotice extends TestCase {
 			return (object) [ 'id' => 'general' ];
 		});
 
-		$page = new NoticesSubscriber( $this->api_client, 'views/settings/rocketcdn');
+		$page = new NoticesSubscriber( $this->api_client, Mockery::mock( Beacon::class ), 'views/settings/rocketcdn');
 		$this->assertNull($page->purge_cache_notice() );
 	}
 
@@ -53,7 +54,7 @@ class Test_PurgeCacheNotice extends TestCase {
 		});
 		Functions\when('get_transient')->justReturn(false);
 
-		$page = new NoticesSubscriber( $this->api_client, 'views/settings/rocketcdn');
+		$page = new NoticesSubscriber( $this->api_client, Mockery::mock( Beacon::class ), 'views/settings/rocketcdn');
 		$this->assertNull($page->purge_cache_notice() );
 	}
 
@@ -81,7 +82,7 @@ class Test_PurgeCacheNotice extends TestCase {
 			'message' => 'RocketCDN cache purge successful.',
 		]);
 
-		$page = new NoticesSubscriber( $this->api_client, 'views/settings/rocketcdn');
+		$page = new NoticesSubscriber( $this->api_client, Mockery::mock( Beacon::class ), 'views/settings/rocketcdn');
 		$page->purge_cache_notice();
 	}
 }

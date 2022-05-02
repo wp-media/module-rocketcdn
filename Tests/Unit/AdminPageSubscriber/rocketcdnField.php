@@ -28,6 +28,8 @@ class Test_RocketcdnField extends TestCase {
 		parent::setUp();
 
 		$this->stubRocketGetConstant();
+		$this->stubEscapeFunctions();
+		$this->stubTranslationFunctions();
 
 		$this->api_client = Mockery::mock( APIClient::class );
 		$this->options    = Mockery::mock( Options_Data::class );

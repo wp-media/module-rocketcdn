@@ -5,6 +5,7 @@ namespace WP_Rocket\Tests\Unit\NoticesSubscriber;
 use Mockery;
 use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
+use WP_Rocket\Engine\Admin\Beacon\Beacon;
 use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
 use WP_Rocket\Tests\StubTrait;
@@ -31,6 +32,7 @@ class Test_PromoteRocketcdnNotice extends TestCase {
 			NoticesSubscriber::class . '[generate]',
 			[
 				$this->api_client,
+				Mockery::mock( Beacon::class ),
 				'views/settings/rocketcdn',
 			]
 		);

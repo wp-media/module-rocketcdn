@@ -4,13 +4,14 @@ namespace WP_Rocket\Tests\Unit\NoticesSubscriber;
 use Mockery;
 use Brain\Monkey\Functions;
 use WPMedia\PHPUnit\Unit\TestCase;
+use WP_Rocket\Engine\Admin\Beacon\Beacon;
 use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
 use WP_Rocket\Tests\StubTrait;
 
 /**
  * @covers \WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber::add_dismiss_script
- * 
+ *
  * @group  Notices
  */
 class Test_AddDismissScript extends TestCase {
@@ -24,9 +25,10 @@ class Test_AddDismissScript extends TestCase {
 		parent::setUp();
 
 		$this->stubRocketGetConstant();
+		$this->stubEscapeFunctions();
 
 		$this->api_client = Mockery::mock( APIClient::class );
-		$this->notices    = new NoticesSubscriber( $this->api_client, 'views/settings/rocketcdn' );
+		$this->notices    = new NoticesSubscriber( $this->api_client, Mockery::mock( Beacon::class ), 'views/settings/rocketcdn' );
 	}
 
 	public function tearDown() {

@@ -35,7 +35,7 @@ class Test_GetPricingData extends TestCase {
 	}
 
 	public function testShouldReturnWPErrorWhenResponseNot200() {
-		$this->mockCommonWpFunctions();
+		$this->stubTranslationFunctions();
 
 		Functions\when( 'get_transient' )->justReturn( false );
 
@@ -54,7 +54,7 @@ class Test_GetPricingData extends TestCase {
 	}
 
 	public function testShouldReturnWPErrorWhenReponseDataIsEmpty() {
-		$this->mockCommonWpFunctions();
+		$this->stubTranslationFunctions();
 
 		Functions\when( 'get_transient' )->justReturn( false );
 
@@ -74,7 +74,7 @@ class Test_GetPricingData extends TestCase {
 	}
 
 	public function testShouldReturnPricingArrayWhenSuccessful() {
-		$this->mockCommonWpFunctions();
+		$this->stubTranslationFunctions();
 
 		Functions\when( 'get_transient' )->justReturn( false );
 

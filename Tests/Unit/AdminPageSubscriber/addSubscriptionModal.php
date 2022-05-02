@@ -26,6 +26,7 @@ class Test_AddSubscriptionModal extends TestCase {
 		parent::setUp();
 
 		$this->stubRocketGetConstant();
+		$this->stubEscapeFunctions();
 
 		Functions\stubs(
 			[

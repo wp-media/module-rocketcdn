@@ -4,6 +4,7 @@ namespace WP_Rocket\Tests\Unit\NoticesSubscriber;
 use Brain\Monkey\Functions;
 use Mockery;
 use WPMedia\PHPUnit\Unit\TestCase;
+use WP_Rocket\Engine\Admin\Beacon\Beacon;
 use WP_Rocket\Engine\CDN\RocketCDN\NoticesSubscriber;
 
 /**
@@ -19,6 +20,7 @@ class Test_ToggleCTA extends TestCase {
 
 		$this->notices = new NoticesSubscriber(
 			Mockery::mock( 'WP_Rocket\Engine\CDN\RocketCDN\APIClient' ),
+			Mockery::mock( Beacon::class ),
 			'views/settings/rocketcdn'
 		);
 	}

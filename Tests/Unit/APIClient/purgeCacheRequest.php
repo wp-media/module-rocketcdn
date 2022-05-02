@@ -14,7 +14,7 @@ use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 class Test_PurgeCacheRequest extends TestCase {
 
     public function testShouldReturnMissingIdentifierWhenNoID() {
-        $this->mockCommonWpFunctions();
+        $this->stubTranslationFunctions();
 
         Functions\when('get_transient')
 			->justReturn([]);
@@ -29,7 +29,7 @@ class Test_PurgeCacheRequest extends TestCase {
     }
 
     public function testShouldReturnMissingIdentifierWhenWrongID() {
-        $this->mockCommonWpFunctions();
+        $this->stubTranslationFunctions();
 
         Functions\when('get_transient')
 			->justReturn([
@@ -47,7 +47,7 @@ class Test_PurgeCacheRequest extends TestCase {
     }
 
     public function testShouldReturnUnexpectedResponseWhenIncorrectResponseCode() {
-        $this->mockCommonWpFunctions();
+        $this->stubTranslationFunctions();
 
         Functions\when('get_transient')
 			->justReturn([
@@ -68,7 +68,7 @@ class Test_PurgeCacheRequest extends TestCase {
     }
 
     public function testShouldReturnUnexpectedResponseWhenEmptyBody() {
-        $this->mockCommonWpFunctions();
+        $this->stubTranslationFunctions();
 
         Functions\when('get_transient')
 			->justReturn([
@@ -90,7 +90,7 @@ class Test_PurgeCacheRequest extends TestCase {
     }
 
     public function testShouldReturnUnexpectedResponseWhenMissingParameter() {
-        $this->mockCommonWpFunctions();
+        $this->stubTranslationFunctions();
 
         Functions\when('get_transient')
 			->justReturn([
@@ -116,7 +116,7 @@ class Test_PurgeCacheRequest extends TestCase {
     }
 
     public function testShouldReturnErrorMessageWhenSuccessFalse() {
-        $this->mockCommonWpFunctions();
+        $this->stubTranslationFunctions();
 
         Functions\when('get_transient')
 			->justReturn([
@@ -145,7 +145,7 @@ class Test_PurgeCacheRequest extends TestCase {
     }
 
     public function testShouldReturnSuccessMessageWhenSuccessTrue() {
-        $this->mockCommonWpFunctions();
+        $this->stubTranslationFunctions();
 
         Functions\when('get_transient')
 			->justReturn([

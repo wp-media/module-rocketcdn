@@ -13,9 +13,10 @@ use WP_Rocket\Engine\CDN\RocketCDN\APIClient;
 class Test_GetPricingData extends ApiTestCase {
 
 	public function tearDown() {
-		parent::tearDown();
-
 		delete_transient( 'rocketcdn_pricing' );
+		remove_filter( 'pre_http_request', [ $this, 'shortcut_request'] );
+
+		parent::tearDown();
 	}
 
 	/**
@@ -42,6 +43,7 @@ class Test_GetPricingData extends ApiTestCase {
 	public function testShouldReturnPricingAndSetTransientWhenReceivedFromAPI() {
 		$this->assertFalse( get_transient( 'rocketcdn_pricing' ) );
 
+		add_filter( 'pre_http_request', [ $this, 'shortcut_request'] );
 		// Run it.
 		$actual = ( new APIClient )->get_pricing_data();
 
@@ -53,5 +55,27 @@ class Test_GetPricingData extends ApiTestCase {
 		$this->assertArrayHasKey( 'monthly_price', $actual );
 		$this->assertArrayHasKey( 'annual_price', $actual );
 		$this->assertSame( $actual, get_transient( 'rocketcdn_pricing' ) );
+	}
+
+	public function shortcut_request() {
+		return [
+			'headers' => [],
+			'body' => json_encode(
+				[
+					'is_discount_active' => false,
+					'discounted_price_monthly' => '6.99',
+					'discounted_price_yearly' => '69.9',
+					'discount_campaign_name' => 'halloween',
+					'end_date' => time(),
+					'monthly_price' => '7.99',
+					'annual_price' => '79.9',
+				]
+			),
+			'response' => [
+				'code' => 200,
+			],
+			'cookies' => [],
+			'filename' => '',
+		];
 	}
 }

@@ -17,6 +17,7 @@ class Test_PurgeCacheRequest extends RocketCdnTestCase {
 	use ApiTrait;
 
 	protected static $api_credentials_config_file = 'rocketcdn.php';
+	private $response;
 
 	public static function setUpBeforeClass() {
 		parent::setUpBeforeClass();
@@ -30,16 +31,21 @@ class Test_PurgeCacheRequest extends RocketCdnTestCase {
 	}
 
 	public function tearDown() {
-		parent::tearDown();
-
 		delete_transient( 'rocketcdn_status' );
 		delete_option( 'rocketcdn_user_token' );
+		remove_filter( 'pre_http_request', [ $this, 'set_response' ] );
+
+		parent::tearDown();
 	}
 
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testShouldReturnExpected( $transient, $option, $expected, $success = false ) {
+	public function testShouldReturnExpected( $transient, $option, $response, $expected, $success = false ) {
+		$this->response = $response;
+
+		add_filter( 'pre_http_request', [ $this, 'set_response' ] );
+
 		if ( $success ) {
 			$transient = [ 'id' => self::getApiCredential( 'ROCKETCDN_WEBSITE_ID' ) ];
 			$option    = self::getApiCredential( 'ROCKETCDN_TOKEN' );
@@ -54,5 +60,9 @@ class Test_PurgeCacheRequest extends RocketCdnTestCase {
 			$expected,
 			( new APIClient )->purge_cache_request()
 		);
+	}
+
+	public function set_response() {
+		return $this->response;
 	}
 }
